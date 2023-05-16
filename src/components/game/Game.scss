@@ -1,0 +1,37 @@
+
+
+
+.game{
+
+    text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+    &__infos{
+        display: flex;
+        justify-content: space-between;
+
+        &__team{
+            font-size: 1.5rem;
+
+            &--bleue{
+                color: var(--blue-team);
+            }
+
+            &--rouge{
+                color: var(--red-team);
+            }
+        }
+
+        &__score{
+            display: flex;
+            justify-content: space-evenly;
+            flex: 1;
+            align-items: center;
+            font-family: 'DotGothic16', sans-serif;
+            font-size: 2rem;
+        }
+    }
+
+
+}

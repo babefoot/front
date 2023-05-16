@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+:root{
+    --main: #0D47A1;
+    --secondary: #FF9800;
+    --bg: #F5F5F5;
+    --text: #212121;
+    --accent: #FFEB3B;
+
+    --blue-team: #00AEEF;
+    --red-team: #E30613;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
