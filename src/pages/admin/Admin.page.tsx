@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { PageContainer } from "../Page.container"
-import login from "../../services/api";
+import {login} from "../../services/api";
+import "./Admin.scss";
 
 const Admin = () => {
 
@@ -28,9 +29,9 @@ const Admin = () => {
                     </>
                 )}
                 {loggedIn && (
-                    <div>
+                    <div className="createTournament">
                         <h2>Admin panel</h2>
-                         
+                        
                     </div>
                 )}
             </div>

@@ -1,0 +1,9 @@
+
+
+.viewer{
+    //center this div vertically ref to the height of the screen
+    height: calc(100vh - 8rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

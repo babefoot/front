@@ -9,8 +9,9 @@ export const Header = ({links }: HeaderProps) => {
 
     return (
         <div className='header'>
+            
             <div className='navbar'>
-                <Link to="/home" ><h1>Bab E-foot</h1></Link>
+                <Link to="/game" ><h1>Bab E-foot</h1></Link>
                 <div className='links'>
                     {links.map((link, index) => {
                             return (

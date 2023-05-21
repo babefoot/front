@@ -9,14 +9,12 @@ interface PageContainerProps {
 }
 export const PageContainer = ({children }: PageContainerProps) => {
 
-    const links = [{name:'Home', path: "/home"}, {name: 'Stats', path: "/stats"}]
+    const links = [{name:'Game', path: "/game"}, {name: 'Classement', path: "/stats"}]
 
     return (
     <div className='PageContainer'>
         <Header links={links} />
-        <div>
-            {children}  
-        </div>
+        {children}  
     </div>
     )
 }

@@ -1,0 +1,172 @@
+
+
+.statsPage{
+    text-align: center;
+    justify-content: center;
+
+    .title{
+        font-family: 'DotGothic16', sans-serif;
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.searchBar{
+    margin: 0 auto;
+    width: 30%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: #f8f8f8;
+    background-image: url('https://www.w3schools.com/css/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+
+    
+
+}
+
+.playersToSelect{
+
+    margin: 0 auto;
+    width: 30%;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    margin-top: 10px;
+    z-index: 1;
+
+    li{
+        padding: 12px 20px;
+        cursor: pointer;
+        &:hover{
+            background-color: #ddd;
+        }
+    }
+    
+}
+    
+$title-color: #191970;  // Midnight Blue
+$stat-color: #696969;  // Dim Gray
+
+.statPlayer {
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+
+    h1 {
+        color: $title-color;
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .nb_buts, .nb_won {
+        color: $stat-color;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+}
+
+.top10{
+
+    .type{
+
+        display: flex;
+        justify-content: space-evenly;
+
+
+        
+        
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+            
+            /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+            
+            /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+            
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+            
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+            
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+            
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+            
+            /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+            
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    }
+
+    .player{
+        display: flex;
+        //make a little space between the palyer and his stats
+        justify-content: space-between;
+
+    }
+    
+
+    width: 90%;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+
+}

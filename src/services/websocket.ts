@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback, SetStateAction, Dispatch } from 'react';
 import { game, tournament } from '../models/models';
 import { log } from 'console';
 
@@ -11,7 +11,7 @@ interface payload{
 }
 
 
-function useWebSocket(url: string) {
+function useWebSocket(url: string, setGoal: Dispatch<SetStateAction<string>>) {
     const [game, setGame] = useState<game>();
     const [tournament, setTournament] = useState<tournament>();
     const webSocket = useRef<WebSocket | null>(null);
@@ -25,10 +25,11 @@ function useWebSocket(url: string) {
             if (prevGame !== undefined) {
                 console.log("aezaeazezaezaez");
                 console.log(team);
-                return team === "r" ? {...prevGame, score_team_red: prevGame.score_team_red + 1} : {...prevGame, score_team_blue: prevGame.score_team_blue + 1};
+                return team === "R" ? {...prevGame, score_team_red: prevGame.score_team_red + 1} : {...prevGame, score_team_blue: prevGame.score_team_blue + 1};
             }
             return prevGame; // Si prevGame est undefined, nous le retournons tel quel
         });
+        setGoal(team);
     }
 
     useEffect(() => {
@@ -75,7 +76,7 @@ function useWebSocket(url: string) {
         };
     }, []);
 
-    const sendMessage = useCallback((message: String) => {
+    const sendMessage = useCallback((message: {}) => {
         if (webSocket.current && webSocket.current.readyState === WebSocket.OPEN) {
         webSocket.current.send(JSON.stringify(message));
         }
